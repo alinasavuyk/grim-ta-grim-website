@@ -9,7 +9,7 @@
     --error-color: #FF2A5F;   /* Червоний кнопок замовити*/
     --accent-text: #00d2ff;
 
-    /*Шрифт*/
+/*Шрифт*/
     --font-family: "Inter", sans-serif;
 }
 body {
@@ -63,7 +63,7 @@ img {
 }}*/
 
                                                     /* Header */
-/*Базові стилі та Мобільна версія (до 767px)*/
+
 .header {
     padding: 16px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -79,7 +79,7 @@ img {
     fill: var(--text-white);
     transition: fill 0.3s ease;
 }
-/*Бургер меню*/
+                                         /*Бургер меню*/
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -91,8 +91,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Початковий стан для анімації */
+
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.3s ease, transform 0.4s ease;
@@ -130,12 +129,11 @@ img {
 .mobile-link:hover {
     color: var(--accent-color);
 }
-/* На мобілці ховаємо звичайний список меню */
 .nav {
     display: none; 
 }
 
-/* Кнопка бургер-меню */
+
 .menu-toggle {
     display: block;
     background: none;
@@ -164,21 +162,17 @@ img {
 .hamburger::before { top: 0; }
 .hamburger { top: 10px; }
 .hamburger::after { top: 20px; }
-/*Планшетна версія (від 768px)*/
 @media (min-width: 768px) {
     .menu-toggle {
-        display: none; /* Ховаємо бургер */
+        display: none; 
     }
-
     .nav {
-        display: block; /* Показуємо меню */
+        display: block; 
     }
-
     .nav-list {
         display: flex;
         gap: 28px;
     }
-
     .nav-link {
         font-weight: 500;
         font-size: 16px;
@@ -190,18 +184,16 @@ img {
     }
     
     .logo-svg {
-        width: 55px; /* Трохи збільшуємо лого для великих екранів */
+        width: 55px; 
         height: 34px;
     }
 }
-/*Комп'ютерна версія (від 1158px)*/
 @media (min-width: 1158px) {
     .header {
         padding: 24px 0;
     }
-
     .nav-list {
-        gap: 40px; /* Більша відстань між пунктами */
+        gap: 40px; 
     }
 }
                                                         /*HERO*/
@@ -221,8 +213,6 @@ img {
     display: flex;
     align-items: center;
     background-color: var(--primary-bg);
-    
-    /* Шлях до 1x версії для звичайних екранів */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                       url('../assets/images/hero1x.webp');
     background-repeat: no-repeat;
@@ -230,7 +220,6 @@ img {
     background-size: cover;
 }
 
-/* Для Retina-дисплеїв та великих екранів підключаємо 2x версію */
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -238,15 +227,14 @@ img {
     }
 }
 
-/* Адаптація висоти для мобільних пристроїв */
 @media (max-width: 767px) {
     .hero {
-        min-height: 400px; /* Зменшуємо висоту на мобілці */
+        min-height: 400px; 
         text-align: center;
     }
 }
 .hero-title {
-    font-size: 32px; /* Мобільний розмір */
+    font-size: 32px; 
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 16px;
@@ -266,7 +254,6 @@ img {
     margin-bottom: 40px;
 }
 
-/* Кнопка Замовити квиток */
 .btn-hero {
     background-color: var(--accent-color);
     color: var(--primary-bg);
@@ -283,10 +270,9 @@ img {
     transform: translateY(-2px);
 }
 
-/* Планшет та Десктоп */
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 56px; /* Розмір з твого скріншоту Figma */
+        font-size: 56px; 
     }
     
     .hero-container {
@@ -316,7 +302,7 @@ color: var(--accent-text);
 
 /* Header рядка */
 .concerts-header {
-    display: none; /* Покажемо тільки на десктопі */
+    display: none; 
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-gray);
@@ -326,7 +312,7 @@ color: var(--accent-text);
 /* Рядок концерту */
 .concert-item {
     display: flex;
-    flex-direction: column; /* По замовчуванню для мобілок */
+    flex-direction: column; 
     gap: 16px;
     padding: 24px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -400,8 +386,8 @@ color: var(--accent-text);
 
 .member-img {
     width: 100%;
-    height: 300px; /* Фіксована висота для однаковості */
-    object-fit: cover; /* Обрізає фото під розмір без деформації */
+    height: 300px; 
+    object-fit: cover;
 }
 
 .member-info {
@@ -414,22 +400,19 @@ color: var(--accent-text);
     font-size: 18px;
 }
 
-/* Адаптивність */
 @media (min-width: 768px) {
     .member-item {
-        width: calc((100% - 20px) / 2); /* 2 в ряд на планшеті */
+        width: calc((100% - 20px) / 2); 
     }
 }
-
 @media (min-width: 1158px) {
     .member-item {
-        width: calc((100% - 40px) / 3); /* 3 в ряд на десктопі */
+        width: calc((100% - 40px) / 3); 
     }
 }
                                                /*HISTORY*/
-/* Секція Наша історія - Фінальний варіант */
 .history {
-    padding: 80px 0; /* Збільшений відступ секції для "дихання" */
+    padding: 80px 0; 
 }
 
 .history-container {
@@ -440,11 +423,11 @@ color: var(--accent-text);
 
 .history-title {
     font-family: var(--font-family);
-    font-size: 24px; /* Узгоджено з макетом */
+    font-size: 24px; 
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
-    margin-bottom: 32px; /* Відступ від заголовка до тексту */
+    margin-bottom: 32px; 
     color: var(--text-white);
 }
 
@@ -452,13 +435,13 @@ color: var(--accent-text);
     font-family: var(--font-family);
     font-size: 15px;
     font-weight: 400;
-    line-height: 1.63; /* Міжрядкова відстань для зручного читання */
+    line-height: 1.63; 
     color: var(--text-gray);
-    margin-bottom: 24px; /* Відступ між абзацами */
+    margin-bottom: 24px; 
 }
 
 .history-text p:last-child {
-    margin-bottom: 0; /* Прибираємо відступ у останнього абзацу */
+    margin-bottom: 0; 
 }
 
 .history-image-wrapper {
@@ -469,19 +452,18 @@ color: var(--accent-text);
 
 .history-img {
     width: 100%;
-    max-width: 590px; /* Обмеження як у Figma */
+    max-width: 590px; 
     height: 300px;
-    border-radius: 12px; /* М'яке заокруглення */
+    border-radius: 12px; 
     object-fit: cover;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Ледь помітна рамка для чіткості */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Десктопна версія */
 @media (min-width: 1158px) {
     .history-container {
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start; /* Вирівнювання по верхньому краю заголовка */
+        align-items: flex-start; 
         gap: 60px;
     }
 
@@ -491,11 +473,10 @@ color: var(--accent-text);
     }
 
     .history-image-wrapper {
-        flex: 0 0 500px; /* Фіксований розмір фото для балансу */
-        margin-top: 60px; /* Невеликий зсув вниз для візуального вирівнювання з текстом */
+        flex: 0 0 500px; 
+        margin-top: 60px; 
     }
 }
-
                                                  /*CONTACTS FORM*/
 .contacts {
     padding: 80px 0;
@@ -516,26 +497,22 @@ color: var(--accent-text);
 
 .contacts-flex-container {
     display: flex;
-    flex-direction: column; /* Блоки (форма і карта) один під одним */
+    flex-direction: column; 
     gap: 32px;
 }
 
-/* Форма */
 .contact-form {
     width: 100%;
 }
 
-
-
 .form-row {
     display: flex;
-    flex-direction: column; /* Поля Ім'я та Email один під одним */
+    flex-direction: column; 
     gap: 20px;
 }
-/* Планшетна версія (від 768px) */
 @media screen and (min-width: 768px) {
     .form-row {
-        flex-direction: row; /* На планшеті повертаємо Ім'я та Email в один ряд */
+        flex-direction: row; 
     }
 }
 .form-group {
@@ -567,7 +544,7 @@ color: var(--accent-text);
 }
 
 .btn-submit {
-    background-color: var(--error-color); /* Рожева кнопка */
+    background-color: var(--error-color); 
     color: #fff;
     padding: 12px 32px;
     border: none;
@@ -576,7 +553,7 @@ color: var(--accent-text);
     font-weight: 700;
 }
 
-/* Картка з картою */
+
 .location-card {
     flex: 1;
     background-color: var(--grin-bg);
@@ -596,10 +573,9 @@ color: var(--accent-text);
     height: 300px;
     border-radius: 8px;
     overflow: hidden;
-    filter: grayscale(1) invert(90%); /* Темна стилізація карти */
+    filter: grayscale(1) invert(90%); 
 }
 
-/* Адаптивність для ПК */
 @media screen and (min-width: 1158px) {
     .contacts-flex-container {
         flex-direction: row;
@@ -614,13 +590,13 @@ color: var(--accent-text);
                               /*FOOTER*/
 .footer {
     padding: 40px 0;
-    background-color: var(--primary-bg); /* Або #000, як на макеті */
+    background-color: var(--primary-bg); 
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
     display: flex;
-    flex-direction: column; /* На мобільних все в стовпчик */
+    flex-direction: column; 
     align-items: center;
     gap: 24px;
     text-align: center;
@@ -653,7 +629,6 @@ color: var(--accent-text);
     color: var(--text-gray);
 }
 
-/* Соцмережі */
 .footer-socials {
     display: flex;
     align-items: center;
@@ -670,10 +645,9 @@ color: var(--accent-text);
     color: var(--accent-color);
 }
 
-/* Десктоп версія (від 768px або 1158px) */
 @media screen and (min-width: 768px) {
     .footer-container {
-        flex-direction: row; /* Розносимо по краях */
+        flex-direction: row; 
         justify-content: space-between;
         text-align: left;
     }
@@ -690,8 +664,8 @@ color: var(--accent-text);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Затемнення фону */
-    backdrop-filter: blur(5px); /* Ефект розмиття */
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(5px); 
     display: flex;
     align-items: center;
     justify-content: center;
