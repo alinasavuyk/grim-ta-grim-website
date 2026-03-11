@@ -25,7 +25,7 @@ const ticketButtons = document.querySelectorAll('.open-modal-btn');
     `;
 
     document.body.appendChild(overlay);
-    document.body.style.overflow = 'hidden'; // Забороняємо скрол сторінки під модалкою
+    document.body.style.overflow = 'hidden'; 
 
     // Функція закриття
     const closeModal = () => {
