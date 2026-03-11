@@ -224,7 +224,7 @@ img {
     
     /* Шлях до 1x версії для звичайних екранів */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                      url('/assets/images/hero-bg1x.webp');
+                      url('./assets/images/hero-bg1x.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -234,7 +234,7 @@ img {
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                          url('/assets/images/hero-bg2x.webp');
+                          url('./assets/images/hero-bg2x.webp');
     }
 }
 
