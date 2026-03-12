@@ -35,10 +35,10 @@ export function initModal() {
             setTimeout(() => {
                 overlay.remove();
                 document.body.style.overflow = '';
-            }, 300);
+            }, 1000);
         };
 
-        setTimeout(() => overlay.classList.add('is-visible'), 10);
+        setTimeout(() => overlay.classList.add('is-visible'), 1000);
 
         overlay.querySelector('.modal-close-btn').onclick = closeModal;
         overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };

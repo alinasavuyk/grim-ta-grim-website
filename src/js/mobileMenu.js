@@ -40,7 +40,7 @@ const menuLinks = [
 
     document.body.style.overflow = 'hidden';
 
-    setTimeout(() => overlay.classList.add('active'), 10);
+    setTimeout(() => overlay.classList.add('active'), 1000);
 
     closeBtn.onclick = removeMenu;
 }
@@ -51,7 +51,7 @@ function removeMenu() {
         menu.classList.remove('active');
         document.body.style.overflow = '';
    
-        setTimeout(() => menu.remove(), 400);
+        setTimeout(() => menu.remove(), 2000);
     }
 }
 
